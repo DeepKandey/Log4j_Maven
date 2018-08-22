@@ -1,9 +1,10 @@
 package com.tests;
 
-import com.utils.LoggerUtil;
+import org.apache.log4j.Logger;
 
 public class HelloExample {
 //	final static Logger  logger = Logger.getLogger("devpinoyLogger");
+	final static Logger  logger = Logger.getLogger(HelloExample.class);
 	
 		public static void main(String[] args) {
 			HelloExample obj = new HelloExample();
@@ -19,9 +20,9 @@ public class HelloExample {
 				logger.info("This is info : " + parameter);
 			}*/
 			 
-			/*logger.warn("This is warn : " + parameter);
+			logger.warn("This is warn : " + parameter);
 			logger.error("This is error : " + parameter);
-			logger.fatal("This is fatal : " + parameter);*/		
-			LoggerUtil.logMessage("Checking LoggerUtil abstract class " + parameter);
+			logger.fatal("This is fatal : " + parameter);	
+			//LoggerUtil.logMessage("Checking LoggerUtil abstract class " + parameter);
 		}
 	}

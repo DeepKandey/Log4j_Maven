@@ -1,0 +1,20 @@
+{
+  "hosts" : [ {
+    "title" : "DESKTOP-D7PUHMF",
+    "threads" : [ {
+      "title" : "13540@DESKTOP-D7PUHMF.main(1)",
+      "testCases" : [ {
+        "uid" : "d5bd2ccfa6f819",
+        "name" : "runMe",
+        "title" : "Run me",
+        "time" : {
+          "start" : 1534937974011,
+          "stop" : 1534937974203,
+          "duration" : 192
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    } ]
+  } ]
+}

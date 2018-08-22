@@ -1,5 +1,6 @@
 package com.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.utils.LoggerUtil;
@@ -25,5 +26,6 @@ public class TestHelloExample {
 			logger.error("This is error : " + parameter);
 			logger.fatal("This is fatal : " + parameter);*/		
 			LoggerUtil.logMessage("Checking LoggerUtil abstract class ");
+			Assert.assertEquals(true, false);
 		}
 	}
