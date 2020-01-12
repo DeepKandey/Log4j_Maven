@@ -13,10 +13,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<aspectj.version>1.9.1</aspectj.version>
+		<java.version>12.0.1</java.version>
+		<aspectj.version>1.9.5</aspectj.version>
 	</properties>
-
 
 	<dependencies>
 		<dependency>
@@ -31,11 +30,18 @@
 			<version>1.2.17</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-testng-adaptor -->
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
 		<dependency>
-			<groupId>ru.yandex.qatools.allure</groupId>
-			<artifactId>allure-testng-adaptor</artifactId>
-			<version>1.5.4</version>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.13.1</version>
 		</dependency>
 
 		<dependency>
@@ -52,7 +58,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.0</version>
+					<version>3.0.0-M4</version>
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>${basedir}/src/main/resources/testng.xml</suiteXmlFile>
@@ -61,10 +67,6 @@
 						<argLine>
 							-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 						</argLine>
-
-						<!-- <properties> <property> <name>listener</name> <value>ru.yandex.qatools.allure.testng.AllureTestListener</value> 
-							</property> </properties> -->
-
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -78,7 +80,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.7.0</version>
+					<version>3.8.1</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
@@ -88,7 +90,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.2.0</version>
 					<executions>
 						<execution>
 							<id>attach-sources</id>
@@ -108,17 +110,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.9</version>
+				<version>3.0.0</version>
 				<configuration>
 					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>ru.yandex.qatools.allure</groupId>
-				<artifactId>allure-maven-plugin</artifactId>
-				<version>2.6</version>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-testng</artifactId>
+				<version>2.13.1</version>
 			</plugin>
 		</plugins>
 	</reporting>
-
 </project>
