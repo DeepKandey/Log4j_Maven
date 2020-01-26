@@ -1,0 +1,22 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Story to use allure report",
+    "children" : [ {
+      "name" : "Simple test case to check Logger",
+      "uid" : "1b37bcf44ed6f8a4",
+      "parentUid" : "c7f9dbca5d7a01e7f7c975186d6856f2",
+      "status" : "failed",
+      "time" : {
+        "start" : 1580011549866,
+        "stop" : 1580011556539,
+        "duration" : 6673
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c7f9dbca5d7a01e7f7c975186d6856f2"
+  } ]
+}

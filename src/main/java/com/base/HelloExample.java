@@ -1,4 +1,4 @@
-package com.tests;
+package com.base;
 
 import org.apache.log4j.Logger;
 
@@ -11,7 +11,6 @@ public class HelloExample {
 	}
 
 	private void runMe(String parameter) {
-
 		if (logger.isDebugEnabled()) {
 			logger.debug("This is debug : " + parameter);
 		}
@@ -23,5 +22,7 @@ public class HelloExample {
 		logger.warn("This is warn : " + parameter);
 		logger.error("This is error : " + parameter);
 		logger.fatal("This is fatal : " + parameter);
-	}
-}
+		logger.info("Checking LoggerUtil abstract class " + parameter);
+
+	} // End of method runMe
+} // End of class HelloExample

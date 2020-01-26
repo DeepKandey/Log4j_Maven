@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-D7PUHMF",
+    "children" : [ {
+      "name" : "9124@DESKTOP-D7PUHMF.main(1)",
+      "children" : [ {
+        "name" : "Simple test case to check Logger",
+        "uid" : "1b37bcf44ed6f8a4",
+        "parentUid" : "0698395a74dc937bf4232fe9c7a314af",
+        "status" : "failed",
+        "time" : {
+          "start" : 1580011549866,
+          "stop" : 1580011556539,
+          "duration" : 6673
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0698395a74dc937bf4232fe9c7a314af"
+    } ],
+    "uid" : "1e5ec3b0a078e0b9c2e17a67ccfeb1dd"
+  } ]
+}

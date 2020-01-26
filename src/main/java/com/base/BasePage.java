@@ -1,4 +1,4 @@
-package com;
+package com.base;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -19,12 +19,12 @@ public class BasePage {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		tdriver.set(driver);
 		return getDriver();
-	}
+	} // End of method initialize_driver
 
 	public static synchronized WebDriver getDriver() {
 		return tdriver.get();
-	}
-}
+	} // End of method getDriver
+} // End of class BasePage

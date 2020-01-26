@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.tests.TestHelloExample",
+    "children" : [ {
+      "name" : "runMe",
+      "uid" : "1b37bcf44ed6f8a4",
+      "parentUid" : "b0b635c7935abd443f5a5a9b9fae1d9d",
+      "status" : "failed",
+      "time" : {
+        "start" : 1580011549866,
+        "stop" : 1580011556539,
+        "duration" : 6673
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.tests.TestHelloExample"
+  } ]
+}

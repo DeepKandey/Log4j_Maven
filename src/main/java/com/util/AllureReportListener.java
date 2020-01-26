@@ -1,4 +1,4 @@
-package com.utils;
+package com.util;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -7,7 +7,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.BasePage;
+import com.base.BasePage;
 
 import io.qameta.allure.Attachment;
 
@@ -58,7 +58,6 @@ public class AllureReportListener implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult iTestResult) {
 		System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
-		Object testClass = iTestResult.getInstance();
 		WebDriver driver = BasePage.getDriver();
 		// Allure ScreenShotRobot and SaveTestLog
 		if (driver instanceof WebDriver) {
@@ -78,5 +77,4 @@ public class AllureReportListener implements ITestListener {
 	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
 		System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
 	}
-
 }

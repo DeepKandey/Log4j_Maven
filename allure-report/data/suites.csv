@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Jan 26 09:35:49 IST 2020","Sun Jan 26 09:35:56 IST 2020","6673","Suite","Test","com.tests.TestHelloExample","com.tests.TestHelloExample","runMe","Simple test case to check Logger","test case to check allure report"
