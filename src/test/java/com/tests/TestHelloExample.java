@@ -2,14 +2,14 @@ package com.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.BasePage;
-import com.util.*;
+import com.util.LoggerUtil;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
 import io.qameta.allure.Severity;
@@ -17,32 +17,32 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
-@Listeners(AllureReportListener.class)
 public class TestHelloExample extends BasePage {
 
 	public BasePage basePage;
 	private WebDriver driver;
 
-	@BeforeClass
-	public void setUp() {
+	@BeforeMethod
+	private void setUp() {
 		basePage = new BasePage();
 		driver = basePage.initialize_driver();
 	}
 
-	@Test(priority = 1, description = "Simple test case to check Logger")
+	@Test(priority = 1, description = "Test to check Logger Utility")
 	@Severity(SeverityLevel.NORMAL)
-	@Description("test case to check allure report")
-	@Story("Story to use allure report")
-	@Step("This is just method for Demo purpose")
+	@Description("Description of the test case - Allure")
+	@Story("Test case written for Story - Allure")
+	@Step("Step at test Body level - Allure")
 	@Link("https://docs.qameta.io/allure/")
 	private void runMe() {
-		LoggerUtil.logMessage("Checking LoggerUtil abstract class ");
+		LoggerUtil.logMessage("Logs wriiten using Logger Utility");
+		Allure.step("Logging steps for action performed- Navigating to Google site");
 		driver.get("https://www.google.com");
 		Assert.assertEquals(false, true);
 	} // End of method runMe
 
-	@AfterClass
-	public void tearDown() {
+	@AfterMethod
+	private void tearDown() {
 		driver.quit();
 	}
 } // End of class TestHelloExample

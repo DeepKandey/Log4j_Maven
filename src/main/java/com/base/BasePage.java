@@ -16,6 +16,7 @@ public class BasePage {
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:/Users/deepa/Downloads/Browser Drivers/Chrome Drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.silentOutput", "true"); // To suppress the Chrome logs on console
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
