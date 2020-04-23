@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.util.AllureReportListener"/>
   </listeners>
-  <test thread-count="2" name="Test" verbose="0">
+  <test thread-count="1" name="Test" verbose="0">
     <classes>
       <class name="com.tests.TestHelloExample"/>
     </classes>
